@@ -1,0 +1,20 @@
+<h1>Listado de Recursos</h1>
+<hr>
+<table class="table">
+  <thead >
+    <tr>
+      <th scope="col">nombre_recurso</th>
+      <th scope="col">valor_recurso</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of recursos">
+      <th scope="row">{{item.nombre}}</th>
+      <td>{{item.id}}</td>
+      <td><button class="btn btn-danger" (click)="eliminar(item.id)">Eliminar</button>
+      <button style="margin-left: 5px;" [routerLink]="['/tabla/editar',item.id]" class="btn btn-warning">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

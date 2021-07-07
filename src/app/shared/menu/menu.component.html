@@ -1,0 +1,13 @@
+<h1>Menu</h1>
+
+<h2>{{auth.usuario}}</h2>
+<hr />
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let item of routes"
+    [routerLink]="[item.ruta]"
+    routerLinkActive="active"
+  >
+    {{ item.texto }}
+  </li>
